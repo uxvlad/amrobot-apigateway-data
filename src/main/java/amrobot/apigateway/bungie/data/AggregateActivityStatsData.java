@@ -12,5 +12,12 @@ public interface AggregateActivityStatsData {
 
   int id();
 
+  /**
+   * @return the map where key is metric (e.g. activityCompletions)
+   */
   Map<String, ActivityStatsValue> values();
+
+  static ImmutableAggregateStatsData.Builder builder() {
+    return ImmutableAggregateStatsData.builder();
+  }
 }

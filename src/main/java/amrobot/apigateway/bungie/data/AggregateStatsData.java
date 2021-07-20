@@ -14,4 +14,8 @@ public interface AggregateStatsData {
   List<AggregateActivityStatsData> activities();
 
   Instant expiration();
+
+  static ImmutableAggregateStatsData.Builder builder() {
+    return ImmutableAggregateStatsData.builder();
+  }
 }

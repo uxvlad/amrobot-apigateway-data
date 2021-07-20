@@ -12,4 +12,8 @@ public interface ActivityStatsValue {
   double value();
 
   String displayValue();
+
+  static ImmutableActivityStatsValue.Builder builder() {
+    return ImmutableActivityStatsValue.builder();
+  }
 }

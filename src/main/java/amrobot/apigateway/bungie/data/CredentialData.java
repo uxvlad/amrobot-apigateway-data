@@ -15,4 +15,8 @@ public interface CredentialData {
    * Credential type.
    */
   int type();
+
+  static ImmutableCredentialData.Builder builder() {
+    return ImmutableCredentialData.builder();
+  }
 }

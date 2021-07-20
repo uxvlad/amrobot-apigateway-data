@@ -12,4 +12,8 @@ public interface UserMembershipData {
   long id();
 
   CredentialData credential();
+
+  static ImmutableUserMembershipData.Builder builder() {
+    return ImmutableUserMembershipData.builder();
+  }
 }
