@@ -1,4 +1,4 @@
-package amrobot.apigateway.data.bungie;
+package amrobot.apigateway.bungie.data;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
