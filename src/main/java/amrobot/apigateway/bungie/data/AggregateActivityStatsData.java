@@ -6,8 +6,8 @@ import java.util.Map;
 import org.immutables.value.Value.Immutable;
 
 @Immutable
-@JsonSerialize(as = ImmutableAggregateStatsData.class)
-@JsonDeserialize(as = ImmutableAggregateStatsData.class)
+@JsonSerialize(as = ImmutableAggregateActivityStatsData.class)
+@JsonDeserialize(as = ImmutableAggregateActivityStatsData.class)
 public interface AggregateActivityStatsData {
 
   int id();
@@ -17,7 +17,7 @@ public interface AggregateActivityStatsData {
    */
   Map<String, ActivityStatsValue> values();
 
-  static ImmutableAggregateStatsData.Builder builder() {
-    return ImmutableAggregateStatsData.builder();
+  static ImmutableAggregateActivityStatsData.Builder builder() {
+    return ImmutableAggregateActivityStatsData.builder();
   }
 }
