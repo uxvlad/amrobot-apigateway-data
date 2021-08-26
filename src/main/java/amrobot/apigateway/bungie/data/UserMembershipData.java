@@ -11,6 +11,11 @@ public interface UserMembershipData {
 
   long id();
 
+  /**
+   * @return Bungie.NET User
+   */
+  UserData user();
+
   CredentialData credential();
 
   static ImmutableUserMembershipData.Builder builder() {
