@@ -2,6 +2,7 @@ package amrobot.apigateway.bungie.data;
 
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import javax.annotation.Nullable;
 import org.immutables.value.Value.Immutable;
 
 @Immutable
@@ -14,6 +15,8 @@ public interface UserMembershipData {
   /**
    * @return Bungie.NET User
    */
+  @Nullable
+  @Deprecated
   UserData user();
 
   CredentialData credential();
