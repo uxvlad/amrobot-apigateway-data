@@ -1,5 +1,6 @@
 package amrobot.apigateway.bungie.data;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.util.List;
@@ -21,10 +22,16 @@ public interface MembershipData {
   String uid();
 
   /**
+   * @return primary Destiny membership type
+   */
+  MembershipType type();
+
+  /**
    * @return all Destiny memberships of the account
    */
   List<DestinyMembershipData> destinyMemberships();
 
+  @JsonIgnore
   default DestinyMembershipData getPrimaryDestinyMembership() {
     return destinyMemberships().stream()
         .filter(destinyMembership -> id().equals(destinyMembership.id())).findFirst()
