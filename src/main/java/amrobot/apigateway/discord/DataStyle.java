@@ -10,6 +10,10 @@ import org.immutables.value.Value;
 @Target(ElementType.PACKAGE)
 @Retention(RetentionPolicy.CLASS)
 @Value.Style(
+    typeAbstract = "*WsDto",
+    typeImmutable = "*",
+    deepImmutablesDetection = true,
+    generateSuppressAllWarnings = false,
     jdkOnly = true
 )
 public @interface DataStyle {

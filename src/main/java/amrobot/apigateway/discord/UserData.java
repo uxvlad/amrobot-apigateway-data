@@ -5,10 +5,12 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import javax.annotation.Nullable;
 import org.immutables.value.Value.Immutable;
+import org.immutables.value.Value.Style;
 
 @Immutable
 @JsonSerialize(as = ImmutableUserData.class)
 @JsonDeserialize(as = ImmutableUserData.class)
+@Style(jdkOnly = true)
 public interface UserData {
 
   String uid();
