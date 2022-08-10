@@ -32,6 +32,9 @@ public interface SmartMessageWsDto {
     return Collections.emptyList();
   }
 
+  @Value.Default
+  default Collection<ComponentEmbeddedWsDto> components() { return Collections.emptyList(); }
+
   @Immutable
   @JsonSerialize(as = PublicationEmbed.class)
   @JsonDeserialize(as = PublicationEmbed.class)
