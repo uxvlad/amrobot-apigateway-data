@@ -25,6 +25,6 @@ public interface ComponentEmbeddedWsDto {
 
     Optional<Long> id();
 
-    Optional<String> name();
+    String name();
   }
 }
