@@ -16,12 +16,12 @@ public interface ComponentEmbeddedWsDto {
 
   int style();
 
-  Optional<EmojiEmbedded> emoji();
+  Optional<EmojiEmbeddedWsDto> emoji();
 
   @Immutable
   @JsonSerialize(as = EmojiEmbedded.class)
   @JsonDeserialize(as = EmojiEmbedded.class)
-  interface EmojiEmbedded {
+  interface EmojiEmbeddedWsDto {
 
     Optional<Long> id();
 

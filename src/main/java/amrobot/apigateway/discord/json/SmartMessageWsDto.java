@@ -15,7 +15,7 @@ public interface SmartMessageWsDto {
 
   String id();
 
-  Optional<PublicationEmbed> publication();
+  Optional<PublicationEmbedWsDto> publication();
 
   /**
    * A Discord message content.
@@ -38,7 +38,7 @@ public interface SmartMessageWsDto {
   @Immutable
   @JsonSerialize(as = PublicationEmbed.class)
   @JsonDeserialize(as = PublicationEmbed.class)
-  interface PublicationEmbed {
+  interface PublicationEmbedWsDto {
 
     Long community();
 

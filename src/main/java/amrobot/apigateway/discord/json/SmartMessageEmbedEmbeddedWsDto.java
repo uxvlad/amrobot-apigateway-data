@@ -26,14 +26,14 @@ public interface SmartMessageEmbedEmbeddedWsDto {
   Optional<Integer> color();
 
   @Value.Default
-  default Collection<EmbedField> fields() {
+  default Collection<EmbedFieldWsDto> fields() {
     return Collections.emptyList();
   }
 
   @Immutable
   @JsonSerialize(as = EmbedField.class)
   @JsonDeserialize(as = EmbedField.class)
-  interface EmbedField {
+  interface EmbedFieldWsDto {
 
     String name();
 
